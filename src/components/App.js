@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import CategoryFilter from './components/CategoryFilter';
 import DishList from './components/DishList';
-import data from './utils/data';
+import data from './src/data';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('all');
