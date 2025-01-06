@@ -1,15 +1,25 @@
-// src/components/DishCard.js
-import React from 'react';
+import React from "react";
+import "../styles/card.css";
 
-function DishCard({ dish }) {
-  return (
-    <div className="dish-card">
-      <img src={dish.img} alt={dish.title} />
-      <h3>{dish.title}</h3>
-      <p>{dish.desc}</p>
-      <p>Price: ${dish.price}</p>
-    </div>
-  );
+const card = (props) =>{
+    return (
+        <div className="cardWrapper" data-test-id={"menu-item-"+props.category} id={props.id}>
+            <div className="cardDiv">
+                <img className="cardImg" src={props.img}></img>
+                <div className="cardContent">
+                    <div className="cardTop">
+                        <h1 className="cardName">{props.title}</h1>
+                        <p className="cardPrice">$ {props.price}</p>
+                    </div>
+                    <hr className="cardLine"></hr>
+                    <div className="cardDescription">{props.desc}</div>
+                </div>
+
+
+            </div>
+            
+        </div>
+    )
 }
 
-export default DishCard;
+export default card;
